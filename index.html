@@ -433,9 +433,10 @@
           </p>
 
           <div class="bg-white p-0 rounded-lg shadow-lg">
-            <form class="space-y-6">
+            <form class="space-y-6" name="submit-to-google-sheet">
               <div style="margin-top: 0 !important">
                 <input
+                name="FullName"
                   type="text"
                   placeholder="FULL NAME"
                   class="w-full px-4 py-3 bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-blue-500"
@@ -444,6 +445,7 @@
 
               <div style="margin-top: 0 !important">
                 <input
+                name="Mobile"
                   type="tel"
                   placeholder="MOBILE"
                   class="w-full px-4 py-3 bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-blue-500"
@@ -452,6 +454,7 @@
 
               <div style="margin-top: 0 !important">
                 <input
+                name="Email"
                   type="email"
                   placeholder="EMAIL"
                   class="w-full px-4 py-3 bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-blue-500"
@@ -462,22 +465,28 @@
                 class="flex flex-col sm:flex-row justify-center sm:space-x-6 space-y-4 sm:space-y-0 pt-4 " style="padding-left: 12px;">
                 <label class="flex items-center text-gray-700">
                   <input
-                    type="checkbox"
+                  name="UserAction"
+                    type="radio"
                     class="form-checkbox h-4 w-4 text-blue-600"
+                    value="Call Back"
                   />
                   <span class="ml-2">I want a call back</span>
                 </label>
                 <label class="flex items-center text-gray-700">
                   <input
-                    type="checkbox"
+                  name="UserAction"
+                    type="radio"
                     class="form-checkbox h-4 w-4 text-blue-600"
+                    value="Book Demo"
                   />
                   <span class="ml-2">Book my demo session</span>
                 </label>
                 <label class="flex items-center text-gray-700">
                   <input
-                    type="checkbox"
+                  name="UserAction"
+                    type="radio"
                     class="form-checkbox h-4 w-4 text-blue-600"
+                    value="Discover More Offers"
                   />
                   <span class="ml-2">Discover more offers</span>
                 </label>
@@ -517,18 +526,16 @@
                     class="object-cover mb-4"
                   />
                   <h3 class="text-xl font-semibold text-white mb-2 w-full ">
-                    Weight Loss
+                    Flagship 1.0 & 2.0
                   </h3>
                   <p
                     style="color: rgb(255, 127, 0)"
                     class="text-sm font-thin mb-2 w-full heading-h3"
                   >
-                    Achieve your ideal body
+                    Transformational Awakening
                   </p>
                   <p class="text-gray-400 text-sm w-full">
-                    Our personalized weight loss programs combine effective
-                    workouts with nutritional guidance to help you shed pounds
-                    safely and sustainably.
+                    The highest standard in training, coaching, and care designed to achieve the best form of yourself.
                   </p>
                 </div>
               </div>
@@ -544,18 +551,16 @@
                     class="object-cover mb-4"
                   />
                   <h3 class="text-xl font-semibold text-white mb-2 w-full ">
-                    Muscle Gain
+                    Personal Training
                   </h3>
                   <p
                     style="color: rgb(255, 127, 0)"
                     class="text-sm font-thin text-[#eb6822] mb-2 w-full heading-h3"
                   >
-                    Build strength and mass
+                    Tailored Support For Body Goals
                   </p>
                   <p class="text-gray-400 text-sm w-full">
-                    Tailored strength training routines and diet plans designed
-                    to maximize muscle growth and improve overall physical
-                    power.
+                    An immersive plan that fuses training, nutrition, and mindset coaching, delivering a reset for both body and mind.
                   </p>
                 </div>
               </div>
@@ -571,18 +576,16 @@
                     class="object-cover mb-4"
                   />
                   <h3 class="text-xl font-semibold text-white mb-2 w-full ">
-                    Endurance
+                    FitMap Move
                   </h3>
                   <p
                     style="color: rgb(255, 127, 0)"
                     class="text-sm font-thin text-[#eb6822] mb-2 w-full heading-h3"
                   >
-                    Boost your stamina
+                    Open Body, Calm Mind.
                   </p>
                   <p class="text-gray-400 text-sm w-full">
-                    Comprehensive training programs focused on enhancing
-                    cardiovascular health and overall endurance for long-lasting
-                    energy.
+                    A complete body stretch program designed to restore mobility, unlock flexibility, and bring freedom back to your movement.
                   </p>
                 </div>
               </div>
@@ -598,18 +601,16 @@
                     class="object-cover mb-4"
                   />
                   <h3 class="text-xl font-semibold text-white mb-2 w-full">
-                    Flexibility
+                    FitMap Hybrid
                   </h3>
                   <p
                     style="color: rgb(255, 127, 0)"
                     class="text-sm font-thin text-[#eb6822] mb-2 w-full heading-h3"
                   >
-                    Enhance your mobility
+                    Change. Complete. Conquer.
                   </p>
                   <p class="text-gray-400 text-sm w-full">
-                    Specialized stretching and mobility exercises to improve
-                    flexibility, reduce injury risk, and enhance overall
-                    movement quality.
+                    Build to sharpen performance, elevate endurance, and push you to the podium. Training for those ready to test their limits and rise above on the world stage.
                   </p>
                 </div>
               </div>
@@ -620,7 +621,10 @@
                 style="background-color: #e56623"
                 class="px-5 py-2 text-white transition duration-300"
               >
+              <a href="#fitmap-lead-form">
+
                 BOOK A CONSULTATION
+              </a>
               </button>
             </div>
 
@@ -636,7 +640,7 @@
           <div class="relative inline-block">
             <video
               id="walkthroughVideo"
-              src="https://www.pexels.com/download/video/35308890/"
+              src="images/Fitmap walkthrough.MP4"
               poster="https://placehold.co/1200x600/png"
               class="w-full h-auto rounded-lg shadow-lg"
               controls="false"
@@ -720,7 +724,7 @@
 
           <div class="text-center mb-12">
       <h2 class="text-5xl font-bold mb-4">
-        Our Services
+        One pass, many benefits.
       </h2>
       <!-- <p class="max-w-2xl mx-auto text-gray-300">
         Everything you need to stay fit, healthy, and motivated — all under one roof.
@@ -737,10 +741,9 @@
                 alt="Grid Image 1"
                 class="mb-4 w-full h-48 object-cover rounded-lg"
               />
-              <h3 class="text-2xl font-bold mb-2">Expert Trainers</h3>
+              <h3 class="text-2xl font-bold mb-2">World-class Equipment</h3>
               <p class="text-white-400">
-                Our certified trainers provide personalized coaching to help you
-                achieve your fitness goals safely and effectively.
+                Our cutting-edge equipment gets you lifting, sweating, and feeling strong in no time. No fuss, just results you'll actually enjoy.
               </p>
             </div>
 
@@ -752,11 +755,10 @@
                 class="mb-4 w-full h-48 object-cover rounded-lg"
               />
               <h3 class="text-2xl font-bold mb-2">
-                State-of-the-Art Facilities
+                Expert Trainers
               </h3>
               <p class="text-white-400">
-                Enjoy access to modern equipment and a clean, motivating
-                environment designed for all types of workouts.
+                Our trainers really know their stuff. No drill-sergeant vibes. Just experienced pros who guide you, motivate you, and keep it fun along the way.
               </p>
             </div>
 
@@ -767,10 +769,9 @@
                 alt="Grid Image 3"
                 class="mb-4 w-full h-48 object-cover rounded-lg"
               />
-              <h3 class="text-2xl font-bold mb-2">Diverse Class Offerings</h3>
+              <h3 class="text-2xl font-bold mb-2">Range of Programs</h3>
               <p class="text-white-400">
-                From high-intensity interval training to yoga and spin, find the
-                perfect class to fit your fitness journey.
+                A wide mix of programs, so there's something for every mood and goal. From go-hard days to take-it-easy ones, we've got you covered.
               </p>
             </div>
 
@@ -781,10 +782,10 @@
                 alt="Grid Image 4"
                 class="mb-4 w-full h-48 object-cover rounded-lg"
               />
-              <h3 class="text-2xl font-bold mb-2">Nutrition Guidance</h3>
+              <h3 class="text-2xl font-bold mb-2">Open Plush Lawns
+</h3>
               <p class="text-white-400">
-                Our nutrition experts provide tailored meal plans to complement
-                your fitness routine and enhance results.
+                An open garden where fresh air and sunshine come standard. Work out. breathe easy, and soak in a little green between sets.
               </p>
             </div>
 
@@ -795,10 +796,10 @@
                 alt="Grid Image 5"
                 class="mb-4 w-full h-48 object-cover rounded-lg"
               />
-              <h3 class="text-2xl font-bold mb-2">Personalized Care</h3>
+              <h3 class="text-2xl font-bold mb-2">Trained Dedicated Staff
+</h3>
               <p class="text-white-400">
-                We offer one-on-one training sessions and customized workout
-                plans to meet your unique needs.
+                A trained, dedicated team that's always got your back. Warm, attentive, and ready to help without ever hovering.
               </p>
             </div>
 
@@ -809,10 +810,10 @@
                 alt="Grid Image 6"
                 class="mb-4 w-full h-48 object-cover rounded-lg"
               />
-              <h3 class="text-2xl font-bold mb-2">Community Support</h3>
+              <h3 class="text-2xl font-bold mb-2">Privacy & Hygiene
+</h3>
               <p class="text-white-400">
-                Join a vibrant community of fitness enthusiasts who motivate and
-                inspire each other to reach new heights.
+                Spotless washrooms and lockers, with privacy that's actually respected. Clean, calm, and comfortable just how it should be.
               </p>
             </div>
           </div>
@@ -947,7 +948,7 @@
   class="relative py-10 text-white overflow-hidden bg-center bg-cover desktop-img"
   style="
     background-image:
-      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)),
       url('images/background1.png');
   "
 >
@@ -1029,12 +1030,11 @@
       <!-- left TESTIMONIAL -->
       <div class="lg:col-span-5 flex items-center">
         <p class="text-sm md:text-base leading-relaxed max-w-md" style="text-align: right;" >
-          Started my transformation for “Pushpa” at Fitmap. The support system
-          is great and I personally trained with Satish Paryada in the deep
-          forests during movie shoots.
+          My trainer Satish Paryada has been a great motivation for me. Thank you for driving me to stay fit & healthy.
+
           <br />
           <span class="block mt-4 font-semibold">
-            – Allu Arjun
+            – Mahesh Babu
           </span>
         </p>
       </div>
@@ -1112,12 +1112,11 @@
       <img src="images/client9.png" alt="">
       <img src="images/client14.png" alt="">
       <p class="trainer-text">
-          Started my transformation for “Pushpa” at Fitmap. The support system
-          is great and I personally trained with Satish Paryada in the deep
-          forests during movie shoots.
+         My trainer Satish Paryada has been a great motivation for me. Thank you for driving me to stay fit & healthy.
+
           <br />
           <span class="block mt-4 font-semibold">
-            – Allu Arjun
+            – Mahesh Babu
           </span>
         </p>
       <img src="images/client8.png" alt="">
@@ -1223,6 +1222,7 @@
         </div>
 
         <!-- Button -->
+
         
 
       </div>
@@ -1315,6 +1315,20 @@
           },
         },
       });
+    </script>
+
+    <script>
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxa91i56ArXOyv02lcUJaFvpV472iwMBB6ZTfyZogkilXnoPZM_tuS0VPGGVOVo1dEF1w/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+
     </script>
   </body>
 </html>
