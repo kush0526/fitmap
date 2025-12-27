@@ -1,0 +1,1320 @@
+<!-- Make a tailwind css boilerplate<!DOCTYPE html>-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitMap Landing Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    .customCardSwiper {
+      /* transition: background-color 0.3s ease; */
+      padding: ;
+    }
+    .customCardSwiper:hover {
+      /* background: #15171c; */
+    }
+
+    #walkthroughVideo{
+      /* display: block !important; */
+    }
+
+    #walkthroughVideo-1{
+      /* display: none ; */
+    }
+    .hero-section .image-container .image-desktop{
+      display: block;
+    }
+    .hero-section .image-container .image-phone{
+      display: none !important;
+    }
+    .desktop-1{
+      display: block ;
+    }
+
+    .phone-1{
+      display: none;
+    }
+
+    .desktop-footer{
+      display: block !important;
+    }
+
+    .phone-footer{
+      display: none;
+    }
+    
+    @media (max-width:768px) {
+
+  .swiper-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  /* #walkthroughVideo-1{
+    display: block ;
+  } */
+
+  .video-2{
+    padding: 0;
+  }
+  /* #walkthroughVideo{
+    display: none !important;
+  } */
+  .walkthrough-video-section{
+    padding: 20px !important;
+  }
+  .mobile-grid{
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+  .mobile-grid .mobile-h{
+    margin-bottom: 26px;
+    padding: 0 35px;
+  }
+
+  .customCardSwiper{
+    padding: 7px;
+    padding-bottom:30px;
+  }
+ .customCardSwiper .heading-h3{
+  margin: 0;
+ }
+ .hero-section .image-container .image-desktop{
+  display: none;
+ }
+ .hero-section .image-container .image-phone{
+  display: block !important;
+ }
+ .hero-section .hero-text{
+
+  width: 90%;
+ }
+
+ .hero-section .pera-text{
+  font-size: 20px;
+  margin-top: 30px;
+ }
+ .desktop-1{
+  display: none !important;
+ }
+
+ .phone-1{
+  display: block !important;
+ }
+
+ .desktop-footer{
+  display: none !important;
+ }
+ .phone-footer{
+  display: block ;
+ }
+ .phone-flex{
+  display: flex;
+  flex-direction: row;
+ }
+ 
+  .hero-section .grid-image{
+    bottom: auto !important;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-57%);
+  }
+
+  .form-ph{
+    padding-top: 85px;
+    padding-bottom: 25px;
+  }
+
+  .form-ph .text-h{
+    font-size: 22px;
+  }
+
+  .form-ph .text-p{
+    font-size: 17px;
+    line-height: normal;
+  }
+   .phone-1 .grid > div {
+    align-items: center;      /* image + text center */
+    text-align: center;
+
+  }
+
+  .phone-1{
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .phone-1 img {
+    width: 70%;               /* image chhoti */
+    max-width: 220px;         /* limit */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* .phone{
+  display: block !important;
+}
+
+.desktop-vid{
+  display: none !important;
+} */
+
+}
+
+
+.desktop-vid {
+  display: block;
+}
+.phone {
+  display: none;
+}
+
+/* Phone + iPhone view */
+@media (max-width: 767px) {
+  .desktop-vid {
+    display: none;
+  }
+  .phone {
+    display: block;
+  }
+}
+/* .phone{
+  display: none;
+}
+
+.desktop-vid{
+  display: block;
+} */
+
+/* kush */
+
+/* HIDE BY DEFAULT (Desktop) */
+.mobile-only-section {
+  display: none;
+}
+
+.hero-section .grid-image{
+  bottom: -5rem;
+}
+
+/* SHOW ONLY ON MOBILE */
+@media (max-width: 767px) {
+  .mobile-only-section {
+    display: block;
+    background-image:url('images/background1.png');
+    background-size: cover;
+    color: #fff;
+    padding: 40px 16px;
+  }
+
+  .trainer-wrapper {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .trainer-wrapper h2 {
+    font-size: 32px;
+    line-height: 1.4;
+    text-align: center;
+    width: 225px;
+        margin: auto;
+        margin-bottom: 46px;
+    /* font-weight: 500; */
+  }
+
+  .trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .trainer-grid img {
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  .trainer-text {
+    font-size: 12px;
+    opacity: 0.75;
+    text-align: right;
+    line-height: 1.5;
+  }
+  .desktop-img{
+    display: none;
+  }
+}
+
+
+  </style>
+
+  <body>
+    <!-- Navbar -->
+    <nav style="background-color: #0d0e10" class="shadow-md relative z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- ================= MOBILE HEADER ================= -->
+    <div class="flex md:hidden flex-col py-3 space-y-3">
+
+      <!-- Top Row -->
+      <div class="flex justify-end items-center">
+        
+
+        <!-- Hamburger -->
+        <button id="menuBtn" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Center Logo -->
+      <div class="flex justify-center" style="margin: -15px;" >
+        <img
+          src="images/fit-logo.png"
+          alt="FitMap Logo"
+          class="w-60"
+        />
+      </div>
+
+      <!-- Bottom Button -->
+      <div class="flex justify-between items-center" style="margin-top: 20px;" >
+        <span class="text-xs text-gray-300">JOIN TODAY</span>
+
+        <button
+          style="background-color:#eb6822"
+          class="text-white text-xs px-2 py-1.5"
+        >
+          BOOK A DEMO
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ================= DESKTOP HEADER (UNCHANGED) ================= -->
+    <div class="hidden md:flex justify-between h-16 items-center">
+
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img style="width:120px" src="images/fit-logo.png" alt="FitMap Logo" />
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="flex items-center space-x-8">
+        <a href="#" class="text-sm text-gray-300 hover:text-yellow-400">Home</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-yellow-400">Programs</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-yellow-400">Academy</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-yellow-400">Affiliations</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-yellow-400">App</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-yellow-400">Events</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-yellow-400">Careers</a>
+        <a href="#" class="text-sm text-gray-300 hover:text-yellow-400">Contact</a>
+      </div>
+
+      <!-- Desktop Buttons -->
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-gray-200 px-4 py-1 hover:bg-gray-700">
+          JOIN TODAY
+        </a>
+        <button style="background-color:#eb6822" class="text-white px-4 py-1">
+          BOOK A DEMO
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Overlay -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black bg-opacity-60 hidden z-40"
+    ></div>
+
+    <!-- Mobile Sidebar -->
+    <div
+      id="sidebar"
+      class="fixed top-0 right-0 w-72 h-full bg-gray-900 shadow-lg transform translate-x-full transition-transform duration-300 z-50"
+    >
+      <div
+        class="p-6 flex justify-between items-center border-b border-gray-700"
+      >
+        <span class="text-xl font-bold text-white">FitMap</span>
+        <button id="closeBtn" class="text-gray-400 text-2xl">&times;</button>
+      </div>
+
+      <div class="p-6 space-y-6">
+        <!-- Nav Links -->
+        <nav class="flex flex-col space-y-4">
+          <a href="#" class="text-gray-300 hover:text-blue-400">Home</a>
+          <a href="#" class="text-gray-300 hover:text-blue-400">Programs</a>
+          <a href="#" class="text-gray-300 hover:text-blue-400">Academy</a>
+          <a href="#" class="text-gray-300 hover:text-blue-400">Affiliations</a>
+          <a href="#" class="text-gray-300 hover:text-blue-400">App</a>
+          <a href="#" class="text-gray-300 hover:text-blue-400">Events</a>
+          <a href="#" class="text-gray-300 hover:text-blue-400">Careers</a>
+          <a href="#" class="text-gray-300 hover:text-blue-400">Contact</a>
+        </nav>
+
+        <!-- Buttons -->
+        <div class="pt-6 space-y-3">
+          <button
+            class="w-full bg-gray-800 text-gray-200 px-4 py-2 rounded-md hover:bg-gray-700"
+          >
+            JOIN TODAY
+          </button>
+          <button
+            class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+          >
+            BOOK A DEMO
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="hero-section">
+      <div class="image-container flex items-center justify-center relative">
+        <div
+          class="hero-text absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+        >
+          <p class="text-lg md:text-2xl text-gray-300 mb-6 pera-text ">
+            Push hard. Recover well. Stay present. It's not just about workouts;
+            it's a way of moving, feeling, and showing up better every day.
+          </p>
+        </div>
+        <img src="images/section-2bg.png" alt="" class="image-desktop"  />
+        <img src="images/Untitled-12.jpg" alt="" class="image-phone" />
+      </div>
+
+      <div
+        
+        class="image-container-hero w-4/5 mx-auto flex grid-cols-1 gap-5 absolute left-1/2 transform -translate-x-1/2 grid-image "
+      >
+        <img
+          src="images/hero-gallery-1.png"
+          alt="Gallery Image 1"
+          class="h-auto"
+          style="width: 33%"
+        />
+        <img
+          src="images/hero-gallery-2.png"
+          alt="Gallery Image 2"
+          class="h-auto"
+          style="width: 33%"
+        />
+        <img
+          src="images/hero-gallery-3.png"
+          alt="Gallery Image 3"
+          class="h-auto"
+          style="width: 33%"
+        />
+      </div>
+      <section
+        class="py-40 bg-cover bg-center relative form-ph "
+        style="background-image: url('images/Untitled-3.png')"
+      >
+        <!-- light overlay -->
+        <div class="absolute inset-0 bg-white/85"></div>
+
+        <div class="relative max-w-4xl mx-auto text-center px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2 text-h ">
+            2026 IS THE YEAR OF FITNESS
+          </h2>
+          <p class="text-2xl text-gray-700 mb-6 leading-relaxed text-p ">
+            Get one month Personal Training free* with our Annual Membership
+          </p>
+
+          <div class="bg-white p-0 rounded-lg shadow-lg">
+            <form class="space-y-6">
+              <div style="margin-top: 0 !important">
+                <input
+                  type="text"
+                  placeholder="FULL NAME"
+                  class="w-full px-4 py-3 bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-blue-500"
+                />
+              </div>
+
+              <div style="margin-top: 0 !important">
+                <input
+                  type="tel"
+                  placeholder="MOBILE"
+                  class="w-full px-4 py-3 bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-blue-500"
+                />
+              </div>
+
+              <div style="margin-top: 0 !important">
+                <input
+                  type="email"
+                  placeholder="EMAIL"
+                  class="w-full px-4 py-3 bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-blue-500"
+                />
+              </div>
+
+              <div
+                class="flex flex-col sm:flex-row justify-center sm:space-x-6 space-y-4 sm:space-y-0 pt-4 " style="padding-left: 12px;">
+                <label class="flex items-center text-gray-700">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox h-4 w-4 text-blue-600"
+                  />
+                  <span class="ml-2">I want a call back</span>
+                </label>
+                <label class="flex items-center text-gray-700">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox h-4 w-4 text-blue-600"
+                  />
+                  <span class="ml-2">Book my demo session</span>
+                </label>
+                <label class="flex items-center text-gray-700">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox h-4 w-4 text-blue-600"
+                  />
+                  <span class="ml-2">Discover more offers</span>
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                style="
+                  background-color: #eb6822;
+                  margin-bottom: 20px !important;
+                "
+                class="w-full sm:w-auto px-8 py-2 text-white font-semibold transition duration-300 ease-in-out"
+              >
+                SUBMIT
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 bg-black mobile-grid ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-thin md:text-4xl text-white mb-12 mobile-h">
+            Different people, different goals. Select the one that's for you.
+          </h2>
+
+          <div class="swiper-container">
+            <div class="swiper-wrapper" style="height: auto;" >
+              <!-- Card 1 -->
+              <div class="swiper-slide">
+                <div
+                  class="customCardSwiper rounded-xl shadow-xl p-6 flex flex-col items-center text-left"
+                >
+                  <img
+                    src="images/goals1.png"
+                    alt="Weight Loss"
+                    class="object-cover mb-4"
+                  />
+                  <h3 class="text-xl font-semibold text-white mb-2 w-full ">
+                    Weight Loss
+                  </h3>
+                  <p
+                    style="color: rgb(255, 127, 0)"
+                    class="text-sm font-thin mb-2 w-full heading-h3"
+                  >
+                    Achieve your ideal body
+                  </p>
+                  <p class="text-gray-400 text-sm w-full">
+                    Our personalized weight loss programs combine effective
+                    workouts with nutritional guidance to help you shed pounds
+                    safely and sustainably.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="swiper-slide">
+                <div
+                  class="customCardSwiper bg-[#15171c] rounded-xl shadow-xl p-6 flex flex-col items-center text-left"
+                >
+                  <img
+                    src="images/goals2.png"
+                    alt="Muscle Gain"
+                    class="object-cover mb-4"
+                  />
+                  <h3 class="text-xl font-semibold text-white mb-2 w-full ">
+                    Muscle Gain
+                  </h3>
+                  <p
+                    style="color: rgb(255, 127, 0)"
+                    class="text-sm font-thin text-[#eb6822] mb-2 w-full heading-h3"
+                  >
+                    Build strength and mass
+                  </p>
+                  <p class="text-gray-400 text-sm w-full">
+                    Tailored strength training routines and diet plans designed
+                    to maximize muscle growth and improve overall physical
+                    power.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="customCardSwiper bg-[#15171c] rounded-xl shadow-xl p-6 flex flex-col items-center text-left"
+                >
+                  <img
+                    src="images/goals3.png"
+                    alt="Endurance"
+                    class="object-cover mb-4"
+                  />
+                  <h3 class="text-xl font-semibold text-white mb-2 w-full ">
+                    Endurance
+                  </h3>
+                  <p
+                    style="color: rgb(255, 127, 0)"
+                    class="text-sm font-thin text-[#eb6822] mb-2 w-full heading-h3"
+                  >
+                    Boost your stamina
+                  </p>
+                  <p class="text-gray-400 text-sm w-full">
+                    Comprehensive training programs focused on enhancing
+                    cardiovascular health and overall endurance for long-lasting
+                    energy.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="swiper-slide">
+                <div
+                  class="customCardSwiper bg-[#15171c] rounded-xl shadow-xl p-6 flex flex-col items-center text-left"
+                >
+                  <img
+                    src="images/goals4.png"
+                    alt="Flexibility"
+                    class="object-cover mb-4"
+                  />
+                  <h3 class="text-xl font-semibold text-white mb-2 w-full">
+                    Flexibility
+                  </h3>
+                  <p
+                    style="color: rgb(255, 127, 0)"
+                    class="text-sm font-thin text-[#eb6822] mb-2 w-full heading-h3"
+                  >
+                    Enhance your mobility
+                  </p>
+                  <p class="text-gray-400 text-sm w-full">
+                    Specialized stretching and mobility exercises to improve
+                    flexibility, reduce injury risk, and enhance overall
+                    movement quality.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center flex justify-center items-center" style="margin-top: 15px;">
+              <button
+                style="background-color: #e56623"
+                class="px-5 py-2 text-white transition duration-300"
+              >
+                BOOK A CONSULTATION
+              </button>
+            </div>
+
+            <!-- Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Make a Walkthrough video section with a play icon in the middle horizontally and vertically the button should be a play icon with a border of black color and border radious should be 100% -->
+      <section class="walkthrough-video-section desktop-vid py-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center video-2 ">
+          <div class="relative inline-block">
+            <video
+              id="walkthroughVideo"
+              src="https://www.pexels.com/download/video/35308890/"
+              poster="https://placehold.co/1200x600/png"
+              class="w-full h-auto rounded-lg shadow-lg"
+              controls="false"
+            ></video>
+
+            
+            <button
+              id="playButton"
+              onclick="toggleVideo()"
+              class="absolute inset-0 flex items-center flex-col justify-center bg-black bg-opacity-30 rounded-lg transition-opacity duration-300"
+            >
+              <svg
+                id="playIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-16 w-16 text-white border-black rounded-full border-2 border-black-600"
+                fill="#000000"
+                viewBox="0 0 24 24"
+                stroke="#000000"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M14.752 11.168l-6.518-3.752A1 1 0 007 8.252v7.496a1 1 0 001.234.97l6.518-3.752a1 1 0 000-1.732z"
+                />
+              </svg>
+
+              <p class="text-2xl font-thin">Walkthrough Video</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="walkthrough-video-section phone  py-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center video-2 ">
+          <div class="relative inline-block">
+            <video
+              id="walkthroughVideo"
+              src="https://www.pexels.com/download/video/35308890/"
+              poster="https://placehold.co/1000x1200/png"
+              class="w-full h-auto rounded-lg shadow-lg"
+              controls="false"
+            ></video>
+
+            
+            <button
+              id="playButton"
+              onclick="toggleVideo()"
+              class="absolute inset-0 flex items-center flex-col justify-center bg-black bg-opacity-30 rounded-lg transition-opacity duration-300"
+            >
+              <svg
+                id="playIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-16 w-16 text-white border-black rounded-full border-2 border-black-600"
+                fill="#000000"
+                viewBox="0 0 24 24"
+                stroke="#000000"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M14.752 11.168l-6.518-3.752A1 1 0 007 8.252v7.496a1 1 0 001.234.97l6.518-3.752a1 1 0 000-1.732z"
+                />
+              </svg>
+
+              <p class="text-2xl font-thin">Walkthrough Video</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Make a grid of 6 items where a image will be displayed in each item and a heading and some paragraph the text should be left aligned -->
+
+      <section style="background-color: #525252" class="py-16 text-white desktop-1 ">
+
+
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+          <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold mb-4">
+        Our Services
+      </h2>
+      <!-- <p class="max-w-2xl mx-auto text-gray-300">
+        Everything you need to stay fit, healthy, and motivated — all under one roof.
+      </p> -->
+    </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            
+            <!-- Item 1 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service1.png"
+                alt="Grid Image 1"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">Expert Trainers</h3>
+              <p class="text-white-400">
+                Our certified trainers provide personalized coaching to help you
+                achieve your fitness goals safely and effectively.
+              </p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service2.png"
+                alt="Grid Image 2"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">
+                State-of-the-Art Facilities
+              </h3>
+              <p class="text-white-400">
+                Enjoy access to modern equipment and a clean, motivating
+                environment designed for all types of workouts.
+              </p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service3.png"
+                alt="Grid Image 3"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">Diverse Class Offerings</h3>
+              <p class="text-white-400">
+                From high-intensity interval training to yoga and spin, find the
+                perfect class to fit your fitness journey.
+              </p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service4.png"
+                alt="Grid Image 4"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">Nutrition Guidance</h3>
+              <p class="text-white-400">
+                Our nutrition experts provide tailored meal plans to complement
+                your fitness routine and enhance results.
+              </p>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service1.png"
+                alt="Grid Image 5"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">Personalized Care</h3>
+              <p class="text-white-400">
+                We offer one-on-one training sessions and customized workout
+                plans to meet your unique needs.
+              </p>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service2.png"
+                alt="Grid Image 6"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">Community Support</h3>
+              <p class="text-white-400">
+                Join a vibrant community of fitness enthusiasts who motivate and
+                inspire each other to reach new heights.
+              </p>
+            </div>
+          </div>
+           <div class="text-center mt-14">
+      <a href="#"
+        class="inline-block bg-white text-black px-7 py-[1px] text-base  font uppercase">
+        Book A Session
+      </a>
+    </div>
+        </div>
+      </section>
+
+      <section style="background-color: #525252" class="py-16 text-white phone-1 ">
+
+
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+          <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold mb-4">
+        Our Services
+      </h2>
+      <!-- <p class="max-w-2xl mx-auto text-gray-300">
+        Everything you need to stay fit, healthy, and motivated — all under one roof.
+      </p> -->
+    </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            
+            <!-- Item 1 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service1.png"
+                alt="Grid Image 1"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">Expert Trainers</h3>
+              <p class="text-white-400">
+                Our certified trainers provide personalized coaching to help you
+                achieve your fitness goals safely and effectively.
+              </p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service2.png"
+                alt="Grid Image 2"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">
+                State-of-the-Art Facilities
+              </h3>
+              <p class="text-white-400">
+                Enjoy access to modern equipment and a clean, motivating
+                environment designed for all types of workouts.
+              </p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service3.png"
+                alt="Grid Image 3"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">Diverse Class Offerings</h3>
+              <p class="text-white-400">
+                From high-intensity interval training to yoga and spin, find the
+                perfect class to fit your fitness journey.
+              </p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service4.png"
+                alt="Grid Image 4"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">Nutrition Guidance</h3>
+              <p class="text-white-400">
+                Our nutrition experts provide tailored meal plans to complement
+                your fitness routine and enhance results.
+              </p>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service1.png"
+                alt="Grid Image 5"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">Personalized Care</h3>
+              <p class="text-white-400">
+                We offer one-on-one training sessions and customized workout
+                plans to meet your unique needs.
+              </p>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="flex flex-col items-start text-left">
+              <img
+                src="images/service2.png"
+                alt="Grid Image 6"
+                class="mb-4 w-full h-48 object-cover rounded-lg"
+              />
+              <h3 class="text-2xl font-bold mb-2">Community Support</h3>
+              <p class="text-white-400">
+                Join a vibrant community of fitness enthusiasts who motivate and
+                inspire each other to reach new heights.
+              </p>
+            </div>
+          </div>
+           <div class="text-center mt-14">
+      <a href="#"
+        class="inline-block bg-white text-black px-7 py-[1px] text-base  font uppercase">
+        Book A Session
+      </a>
+    </div>
+        </div>
+      </section>
+
+
+
+
+
+      <section
+  class="relative py-10 text-white overflow-hidden bg-center bg-cover desktop-img"
+  style="
+    background-image:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url('images/background1.png');
+  "
+>
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- HEADING -->
+    <h2 class="text-center text-3xl md:text-4xl font-light mb-16">
+      We have trained them. We will train you.
+    </h2>
+
+    <!-- MAIN GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+      <!-- LEFT IMAGE GRID -->
+      <div class="lg:col-span-7">
+        <div class="grid grid-cols-4 gap-6">
+
+          <img src="images/client11.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client1.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client2.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client3.png" class="grayscale aspect-square object-cover" />
+
+        </div>
+      </div>
+
+      <!-- RIGHT TESTIMONIAL -->
+      <div class="lg:col-span-5 flex items-center">
+        <p class="text-sm md:text-base leading-relaxed max-w-md">
+          Started my transformation for “Pushpa” at Fitmap. The support system
+          is great and I personally trained with Satish Paryada in the deep
+          forests during movie shoots.
+          <br />
+          <span class="block mt-4 font-semibold">
+            – Allu Arjun
+          </span>
+        </p>
+      </div>
+
+    </div>
+
+<!-- center grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-6 gap-10 py-8 ">
+
+      <div class="lg:col-span-7">
+        <div class="grid grid-cols-6 gap-6 justify-items-center">
+
+
+          <img src="images/client4.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client5.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client10.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client12.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client16.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client15.png" class="grayscale aspect-square object-cover" />
+
+       
+
+        </div>
+      </div>
+
+      <!-- RIGHT TESTIMONIAL -->
+      <!-- <div class="lg:col-span-5 flex items-center">
+        <p class="text-sm md:text-base leading-relaxed max-w-md">
+          Started my transformation for “Pushpa” at Fitmap. The support system
+          is great and I personally trained with Satish Paryada in the deep
+          forests during movie shoots.
+          <br />
+          <span class="block mt-4 font-semibold">
+            – Allu Arjun
+          </span>
+        </p>
+      </div> -->
+
+    </div>
+
+<!-- bootom grid -->
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+      <!-- left TESTIMONIAL -->
+      <div class="lg:col-span-5 flex items-center">
+        <p class="text-sm md:text-base leading-relaxed max-w-md" style="text-align: right;" >
+          Started my transformation for “Pushpa” at Fitmap. The support system
+          is great and I personally trained with Satish Paryada in the deep
+          forests during movie shoots.
+          <br />
+          <span class="block mt-4 font-semibold">
+            – Allu Arjun
+          </span>
+        </p>
+      </div>
+
+      <!-- right IMAGE GRID -->
+      <div class="lg:col-span-7">
+        <div class="grid grid-cols-4 gap-6">
+
+          <img src="images/client8.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client13.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client9.png" class="grayscale aspect-square object-cover" />
+          <img src="images/client14.png" class="grayscale aspect-square object-cover" />
+
+        </div>
+      </div>
+
+    
+
+    </div>
+
+
+
+    <!-- <div class="mt-16 max-w-lg">
+      <p class="text-sm md:text-base leading-relaxed opacity-90">
+        My trainer Satish Paryada has been a great motivation for me.
+        Thank you for driving me to stay fit & healthy.
+        <br />
+        <span class="block mt-3 font-semibold">
+          – Mahesh Babu
+        </span>
+      </p>
+    </div> -->
+
+  </div>
+</section>
+
+
+
+<!-- MOBILE ONLY SECTION -->
+<div class="mobile-only-section">
+  <div class="trainer-wrapper">
+
+    <h2>
+      We have trained them.
+      We will train you.
+    </h2>
+
+    <div class="trainer-grid">
+      <img src="images/client11.png" alt="">
+      <img src="images/client1.png" alt="">
+      <img src="images/client4.png" alt="">
+      <img src="images/client5.png" alt="">
+      <img src="images/client10.png" alt="">
+      <img src="images/client2.png" alt="">
+      <img src="images/client3.png" alt="">
+      <!-- <p class="trainer-text">
+      Standing at the forefront of fitness transformation in India.
+    </p> -->
+     <p class="trainer-text">
+          Started my transformation for “Pushpa” at Fitmap. The support system
+          is great and I personally trained with Satish Paryada in the deep
+          forests during movie shoots.
+          <br />
+          <span class="block mt-4 font-semibold">
+            – Allu Arjun
+          </span>
+        </p>
+    </div>
+    
+    <div class="trainer-grid" style="margin-top:20px;" >
+      <img src="images/client12.png" alt="">
+      <img src="images/client16.png" alt="">
+      <img src="images/client15.png" alt="">
+      <img src="images/client13.png" alt="">
+      <img src="images/client9.png" alt="">
+      <img src="images/client14.png" alt="">
+      <p class="trainer-text">
+          Started my transformation for “Pushpa” at Fitmap. The support system
+          is great and I personally trained with Satish Paryada in the deep
+          forests during movie shoots.
+          <br />
+          <span class="block mt-4 font-semibold">
+            – Allu Arjun
+          </span>
+        </p>
+      <img src="images/client8.png" alt="">
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<footer class="bg-black text-white py-8 desktop-footer ">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-6">
+
+      <!-- LEFT -->
+      <div class="text-sm opacity-70 text-center md:text-left" style="position: relative; bottom: -57px;" >
+        © FITMAP 2025
+      </div>
+
+      <!-- CENTER -->
+      <div class="flex flex-row justify-center gap-6 items-center space-y-4">
+
+        <!-- Logo -->
+        <img src="images/fit-logo.png" alt="Fitmap" style="width: 170px; position: relative; top: -35px;">
+
+        <!-- Menu -->
+        <div class="flex flex-wrap flex-col justify-center  text-sm my-12">
+          <a href="#" class="hover:text-orange-400">Home</a>
+          <a href="#" class="hover:text-orange-400">Programs</a>
+          <a href="#" class="hover:text-orange-400" style="color: #4d4d4d;" >Academy</a>
+          <a href="#" class="hover:text-orange-400" style="color: #4d4d4d;" >Affiliations</a>
+        </div>
+
+        <div class="flex flex-col flex-wrap justify-center  text-sm">
+         <a href="#" class="hover:text-orange-400" style="color: #4d4d4d;"  >App</a>
+          <a href="#" class="hover:text-orange-400" style="color: #4d4d4d;" >Events</a>
+          <a href="#" class="hover:text-orange-400">Careers</a>
+          <a href="#" class="hover:text-orange-400">Contact</a>
+        </div>
+        <a
+  href="#"
+  class="mt-2 px-5 py-1 bg-white text-black whitespace-nowrap
+         hover:bg-[#ff7f00] text-black
+         duration-300 inline-flex items-center justify-center text-sm"
+  style="position: relative; bottom: -25px; color: rgb(255, 127, 0);"
+>
+  KNOW MORE
+        </a>
+        </div>
+
+        <!-- Button -->
+        
+      </div>
+
+      <!-- RIGHT -->
+      <div class="flex justify-center md:justify-end gap-6 text-sm opacity-70">
+        <a href="#" class="hover:text-orange-400">Privacy Policy</a>
+        <a href="#" class="hover:text-orange-400">Site Map</a>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+<footer class="bg-black text-white py-10 phone-footer ">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- MAIN GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center text-center md:text-left">
+
+      <!-- LEFT (Desktop only) -->
+      <div class="hidden md:block text-sm opacity-70">
+        © FITMAP 2025
+      </div>
+
+      <!-- CENTER -->
+      <div class="flex flex-col items-center phone-flex ">
+
+        <!-- Logo -->
+        <img
+          src="images/fit-logo.png"
+          alt="Fitmap"
+          class="w-[150px] mb-8" style="width: 150px; position: relative; top: -110px;"  />
+
+        <!-- Menu -->
+        <div class="flex flex-col items-start gap-2 text-sm mb-6">
+          <a href="#" class="hover:text-orange-400">Home</a>
+          <a href="#" class="hover:text-orange-400">Programs</a>
+          <a href="#" class="text-[#4d4d4d]">Academy</a>
+          <a href="#" class="text-[#4d4d4d]">Affiliations</a>
+          <a href="#" class="text-[#4d4d4d]">App</a>
+          <a href="#" class="text-[#4d4d4d]">Events</a>
+          <a href="#" class="hover:text-orange-400">Careers</a>
+          <a href="#" class="hover:text-orange-400">Contact</a>
+       <a
+          href="#"
+          class="px-6 py-2 bg-white text-sm" style="color: rgb(255, 127, 0);" >
+          KNOW MORE
+        </a>
+        </div>
+
+        <!-- Button -->
+        
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="flex flex-col md:flex-row justify-center md:justify-end gap-4 text-sm opacity-70" style="display: flex; flex-direction: row;" >
+        <p>© FITMAP 2025</p>
+        <a href="#" class="hover:text-orange-400">Privacy Policy</a>
+        <a href="#" class="hover:text-orange-400">Site Map</a>
+      </div>
+
+    </div>
+
+    <!-- MOBILE COPYRIGHT -->
+    <!-- <div class="mt-8 text-center text-sm opacity-70 md:hidden">
+      © FITMAP 2025
+    </div> -->
+
+  </div>
+</footer>
+
+
+
+
+
+
+
+      <script>
+        function toggleVideo() {
+          const video = document.getElementById("walkthroughVideo");
+          const playButton = document.getElementById("playButton");
+
+          if (video.paused) {
+            video.play();
+            playButton.style.opacity = "0";
+          } else {
+            video.pause();
+            playButton.style.opacity = "1";
+          }
+        }
+
+        document
+          .getElementById("walkthroughVideo")
+          .addEventListener("ended", function () {
+            document.getElementById("playButton").style.opacity = "1";
+          });
+      </script>
+      <script src="script.js"></script>
+
+      <!-- Write swiper cdn and configuration for the slider you have made earlier -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+        integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+    </section>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
